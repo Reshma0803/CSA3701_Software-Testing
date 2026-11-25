@@ -1,0 +1,18 @@
+
+def place_order(food, quantity, price):
+    if food and quantity > 0 and price > 0:
+        total = quantity * price
+        return "Order placed successfully. Total: Rs." + str(total)
+    return "Invalid order"
+
+
+def track_order(order_id):
+    if order_id == 101:
+        return "Order is being prepared"
+    return "Order not found"
+
+
+print("FOOD DELIVERY - POSITIVE TESTING")
+
+print(place_order("Pizza", 2, 200))
+print(track_order(101))
