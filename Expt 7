@@ -1,0 +1,18 @@
+
+def place_order(food, quantity, price):
+    if not food:
+        return "Food name required"
+    elif quantity <= 0:
+        return "Invalid quantity"
+    elif price <= 0:
+        return "Invalid price"
+    else:
+        return "Order placed successfully"
+
+
+print("FOOD DELIVERY - NEGATIVE TESTING")
+
+print("Test 1:", place_order("", 2, 200))
+print("Test 2:", place_order("Pizza", 0, 200))
+print("Test 3:", place_order("Burger", -1, 100))
+print("Test 4:", place_order("Pizza", 2, -200))
