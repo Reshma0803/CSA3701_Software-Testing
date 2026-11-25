@@ -1,0 +1,16 @@
+
+def login(username, password):
+    if username == "" or password == "":
+        return "Fields cannot be empty"
+    elif username == "student" and password == "12345":
+        return "Login successful"
+    else:
+        return "Invalid username or password"
+
+
+print("ARMS PORTAL - NEGATIVE TESTING")
+
+print("Test 1:", login("", "12345"))
+print("Test 2:", login("student", ""))
+print("Test 3:", login("wrong", "12345"))
+print("Test 4:", login("student", "wrong"))
