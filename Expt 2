@@ -1,0 +1,16 @@
+
+def login(username, password):
+    if username == "student" and password == "12345":
+        return "Login successful"
+    return "Login failed"
+
+
+def view_marks(student_id):
+    if student_id == "ST101":
+        return "Marks displayed successfully"
+    return "Student not found"
+
+
+print("ARMS PORTAL - POSITIVE TESTING")
+print("Test 1:", login("student", "12345"))
+print("Test 2:", view_marks("ST101"))
