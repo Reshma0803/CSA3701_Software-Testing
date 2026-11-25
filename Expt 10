@@ -1,0 +1,45 @@
+
+print("LIBRARY MANAGEMENT SYSTEM - TEST PLAN")
+
+print("\n1. Objective:")
+print("To test the functionality of the Library Management System.")
+
+print("\n2. Testing Types:")
+print("1. Functional Testing")
+print("2. Integration Testing")
+print("3. System Testing")
+print("4. Usability Testing")
+print("5. Performance Testing")
+print("6. Security Testing")
+
+print("\n3. Modules to be Tested:")
+print("1. Student Login")
+print("2. Book Search")
+print("3. Book Issue")
+print("4. Book Return")
+print("5. Fine Calculation")
+
+print("\n4. Test Cases:")
+
+def login(username, password):
+    if username == "admin" and password == "12345":
+        return "Login successful"
+    return "Login failed"
+
+
+def search_book(book):
+    if book == "Python":
+        return "Book available"
+    return "Book not available"
+
+
+print("Test 1:", login("admin", "12345"))
+print("Test 2:", login("wrong", "12345"))
+print("Test 3:", search_book("Python"))
+print("Test 4:", search_book("Java"))
+
+print("\n5. Exit Criteria:")
+print("All important test cases must pass.")
+
+print("\n6. Expected Result:")
+print("Library system should work correctly.")
