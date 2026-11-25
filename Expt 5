@@ -1,0 +1,18 @@
+
+def add_to_cart(product, price, quantity):
+    if not product:
+        return "Product name required"
+    elif price <= 0:
+        return "Invalid price"
+    elif quantity <= 0:
+        return "Invalid quantity"
+    else:
+        return price * quantity
+
+
+print("E-COMMERCE - NEGATIVE TESTING")
+
+print("Test 1:", add_to_cart("", 1000, 2))
+print("Test 2:", add_to_cart("Mobile", -500, 1))
+print("Test 3:", add_to_cart("Laptop", 50000, 0))
+print("Test 4:", add_to_cart("Phone", 1000, -2))
