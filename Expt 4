@@ -1,0 +1,18 @@
+
+def add_to_cart(product, price, quantity):
+    if product and price > 0 and quantity > 0:
+        return price * quantity
+    return "Invalid product details"
+
+
+def payment(amount):
+    if amount > 0:
+        return "Payment successful"
+    return "Payment failed"
+
+
+print("E-COMMERCE - POSITIVE TESTING")
+
+total = add_to_cart("Laptop", 50000, 2)
+print("Cart total:", total)
+print("Payment:", payment(total))
