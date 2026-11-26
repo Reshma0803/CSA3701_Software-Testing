@@ -1,0 +1,30 @@
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+class FibonacciNthTest {
+
+    int findNthTerm(int n) {
+        if (n <= 0)
+            return -1;
+
+        int a = 0, b = 1;
+
+        for (int i = 1; i < n; i++) {
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+        return a;
+    }
+
+    @Test
+    void testNthTerm() {
+        assertEquals(0, findNthTerm(1));
+        assertEquals(1, findNthTerm(2));
+        assertEquals(1, findNthTerm(3));
+        assertEquals(3, findNthTerm(5));
+        assertEquals(8, findNthTerm(7));
+        assertEquals(-1, findNthTerm(0));
+    }
+}
