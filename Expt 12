@@ -1,0 +1,26 @@
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+class FibonacciTest {
+
+    int fibonacci(int n) {
+        int a = 0, b = 1;
+
+        for (int i = 1; i < n; i++) {
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+        return a;
+    }
+
+    @Test
+    void testFibonacci() {
+        assertEquals(0, fibonacci(1));
+        assertEquals(1, fibonacci(2));
+        assertEquals(1, fibonacci(3));
+        assertEquals(3, fibonacci(5));
+        assertEquals(8, fibonacci(7));
+    }
+}
