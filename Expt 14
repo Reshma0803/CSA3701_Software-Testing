@@ -1,0 +1,19 @@
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+class LeapYearTest {
+
+    boolean isLeapYear(int year) {
+        return (year % 400 == 0) ||
+               (year % 4 == 0 && year % 100 != 0);
+    }
+
+    @Test
+    void testLeapYear() {
+        assertTrue(isLeapYear(2024));
+        assertTrue(isLeapYear(2000));
+        assertFalse(isLeapYear(2023));
+        assertFalse(isLeapYear(1900));
+    }
+}
